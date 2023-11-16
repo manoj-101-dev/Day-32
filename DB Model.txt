@@ -1,0 +1,41 @@
+-- Created Students table
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50),
+    email VARCHAR(50),
+    phone VARCHAR(15)
+);
+
+-- Created Courses table
+CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100),
+    instructor VARCHAR(50)
+);
+
+-- Created Mentors table
+CREATE TABLE Mentors (
+    mentor_id INT PRIMARY KEY,
+    mentor_name VARCHAR(50),
+    mentor_course_id INT 
+);
+
+INSERT INTO Students (student_id, student_name, email, phone)
+VALUES
+    (1, 'Kiran', 'kiran@example.com', '1234567890'),
+    (2, 'Sai', 'sai@example.com', '9876543210'),
+    (3, 'Sanjai', 'sanjai@example.com', '5555555555');
+
+
+INSERT INTO Courses (course_id, course_name, instructor)
+VALUES
+    (101, 'Python Programming', 'Dr. Smith'),
+    (102, 'Web Development', 'Prof. Johnson'),
+    (103, 'Data Science', 'Dr. Lee');
+
+
+INSERT INTO Mentors (mentor_id, mentor_name, mentor_course_id)
+VALUES
+    (1, 'Mentor A', 101), 
+    (2, 'Mentor B', 102), 
+    (3, 'Mentor C', 103); 
